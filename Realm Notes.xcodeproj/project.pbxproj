@@ -17,6 +17,8 @@
 		196790DE1F4ADD70003BACC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 196790DC1F4ADD70003BACC5 /* LaunchScreen.storyboard */; };
 		196790E91F4ADD71003BACC5 /* Realm_NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196790E81F4ADD71003BACC5 /* Realm_NotesTests.swift */; };
 		196790F41F4ADD71003BACC5 /* Realm_NotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196790F31F4ADD71003BACC5 /* Realm_NotesUITests.swift */; };
+		19AA9E571F4C5443008753E1 /* AddNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA9E561F4C5443008753E1 /* AddNoteController.swift */; };
+		19AA9E5A1F4C5B43008753E1 /* placeHolder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19AA9E591F4C5B43008753E1 /* placeHolder.jpg */; };
 		5AB7EA33C292ECC036E94583 /* Pods_Realm_NotesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A335607A67DA12DE1EE1704F /* Pods_Realm_NotesUITests.framework */; };
 		7CF07EF685157A82B5593426 /* Pods_Realm_NotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8EA12516DF7323A6D24F06 /* Pods_Realm_NotesTests.framework */; };
 		A6821FCE0F1CF0E3E0AC094D /* Pods_Realm_Notes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB1FA2383FAFE953D0E07CE /* Pods_Realm_Notes.framework */; };
@@ -56,6 +58,8 @@
 		196790EF1F4ADD71003BACC5 /* Realm NotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Realm NotesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		196790F31F4ADD71003BACC5 /* Realm_NotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm_NotesUITests.swift; sourceTree = "<group>"; };
 		196790F51F4ADD71003BACC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19AA9E561F4C5443008753E1 /* AddNoteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteController.swift; sourceTree = "<group>"; };
+		19AA9E591F4C5B43008753E1 /* placeHolder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeHolder.jpg; sourceTree = "<group>"; };
 		426D69F7D53EAD5E17B2C3C2 /* Pods-Realm Notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Realm Notes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Realm Notes/Pods-Realm Notes.release.xcconfig"; sourceTree = "<group>"; };
 		6F8EA12516DF7323A6D24F06 /* Pods_Realm_NotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Realm_NotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		778173627FEDE8166C1A16C6 /* Pods-Realm NotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Realm NotesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Realm NotesTests/Pods-Realm NotesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				191838601F4B003900C0CD77 /* HomeController.swift */,
+				19AA9E561F4C5443008753E1 /* AddNoteController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 		196790D21F4ADD70003BACC5 /* Realm Notes */ = {
 			isa = PBXGroup;
 			children = (
+				19AA9E581F4C5B38008753E1 /* Images */,
 				19316C7C1F4B326500C8FD4F /* Model */,
 				1918385F1F4B001F00C0CD77 /* Controllers */,
 				1918385C1F4AF1DB00C0CD77 /* Views */,
@@ -186,6 +192,14 @@
 				196790F51F4ADD71003BACC5 /* Info.plist */,
 			);
 			path = "Realm NotesUITests";
+			sourceTree = "<group>";
+		};
+		19AA9E581F4C5B38008753E1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				19AA9E591F4C5B43008753E1 /* placeHolder.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		880289127DDFB600C961D1DF /* Frameworks */ = {
@@ -320,6 +334,7 @@
 				196790DE1F4ADD70003BACC5 /* LaunchScreen.storyboard in Resources */,
 				196790DB1F4ADD70003BACC5 /* Assets.xcassets in Resources */,
 				196790D91F4ADD70003BACC5 /* Main.storyboard in Resources */,
+				19AA9E5A1F4C5B43008753E1 /* placeHolder.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +502,7 @@
 				196790D41F4ADD70003BACC5 /* AppDelegate.swift in Sources */,
 				191838611F4B003900C0CD77 /* HomeController.swift in Sources */,
 				19316C7B1F4B13BC00C8FD4F /* NotesContainer.swift in Sources */,
+				19AA9E571F4C5443008753E1 /* AddNoteController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

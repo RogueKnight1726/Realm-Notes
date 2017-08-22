@@ -12,8 +12,10 @@ import RealmSwift
 class Note: Object {
     
     dynamic var text = String()
-    dynamic var id = Int()
+    dynamic var id = String()
     dynamic var image = String()
+    
+    
     
     func save(){
         do {

@@ -10,6 +10,21 @@ import UIKit
 
 class NoteCell: UICollectionViewCell {
     
+    @IBOutlet weak var thumbNail: UIImageView!
+    @IBOutlet weak var noteText: UILabel!
+    
+    
+    var note: Note?{
+        didSet{
+            
+            self.noteText.text = note?.text
+            if self.thumbNail == nil {
+                self.thumbNail.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+            }
+            
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.layer.cornerRadius = 10.0

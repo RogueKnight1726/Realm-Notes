@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import RealmSwift
+
 
 class NotesContainer: UIView,UICollectionViewDelegate,UICollectionViewDataSource {
     
+    let realm = try! Realm()
     let noteCellIdentifier = "NoteCellIdentifier"
+    var storedValues = List<Note>()
     @IBOutlet weak var notesCollectionView: UICollectionView!
     
     override func awakeFromNib() {
@@ -23,12 +27,18 @@ class NotesContainer: UIView,UICollectionViewDelegate,UICollectionViewDataSource
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 3
+        return self.storedValues.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.noteCellIdentifier, for: indexPath) as! NoteCell
-        cell.backgroundColor = UIColor.blue
+        cell.note = self.storedValues[indexPath.row]
         return cell
+    }
+    
+    public func getDataFromRealm(){
+        let valueList: Results<Note> = {self.realm.objects(Note.self)}()
+        self.storedValues = List(valueList)
+        self.notesCollectionView.reloadData()
     }
 }
